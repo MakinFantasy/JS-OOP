@@ -1,13 +1,11 @@
 import Character from './Character.js';
-import { buildPresetChain } from '@babel/core/lib/config/config-chain.js';
 
-class Bowman extends Character {
-  constructor(name, type) {
+export default class Bowman extends Character {
+  constructor(name, type='Bowman') {
     super(name, type);
+    this.health = 100;
+    this.level = 1;
+    this.attack = 25;
+    this.defence = 25;
   }
 }
-
-const bowman = new Bowman('Character1', 'Bowman');
-bowman.levelUp();
-bowman.damage(50);
-export default bowman;

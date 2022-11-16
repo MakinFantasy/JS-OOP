@@ -1,10 +1,11 @@
 import Character from './Character.js';
 
-class Daemon extends Character {
-  constructor(name, type) {
+export default class Daemon extends Character {
+  constructor(name, type='Daemon') {
     super(name, type);
+    this.health = 100;
+    this.level = 1;
+    this.attack = 10;
+    this.defence = 40;
   }
 }
-
-const daemon = new Daemon('Character4', 'Daemon');
-export default daemon;
